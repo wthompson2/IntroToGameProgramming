@@ -1,6 +1,7 @@
-import Component from "./Component.js"
+import Base from "../Base.js"
 
-class PlayerComponent extends Component{
+// player is represented by a rectangle
+export default class PlayerComponent extends Base.Component{
     width;
     height;
     fill;
@@ -25,5 +26,3 @@ class PlayerComponent extends Component{
 
     }
 }
-
-export default PlayerComponent;

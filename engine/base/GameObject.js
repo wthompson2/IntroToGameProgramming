@@ -1,4 +1,4 @@
-import NameableParent from "./NamableParent.js"
+import NameableParent from "./NameableParent.js"
 
 export default class GameObject extends NameableParent {
     x; y;

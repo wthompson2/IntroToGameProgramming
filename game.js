@@ -1,11 +1,10 @@
-import Scene from "./Scene.js";
-import GameObject from "./GameObject.js"
-import PlayerComponent from "./PlayerComponent.js/index.js"
-import TextComponent from "./TextComponent.js"
-import PlayerBehavior from "./PlayerBehavior.js/index.js";
-import TextBehavior from "./TextBehavior.js";
+import Scenes from "./game/Scenes.js"
+import SceneManager from "./game/SceneManager.js"
+import Engine from "./engine/Engine.js"
 
-let sceneArr = [];
+let sceneStart = new Scenes.SceneStart();
+
+SceneManager.addScene(sceneStart);
 
 // let rotatingSquare = new GameObject(200,200);
 // sceneOne.gameObjects.push(rotatingSquare);
@@ -14,12 +13,12 @@ let sceneArr = [];
 // rotatingSquare.addComponent(playerComponent);
 // rotatingSquare.addComponent(playerBehavior);
 
-// let textTimer = new GameObject(300,300);
-// sceneOne.gameObjects.push(textTimer);
-// let textComponent  = new TextComponent("10","30pt Times","red","blue");
-// let textBehavior = new TextBehavior();
-// textTimer.addComponent(textComponent);
-// textTimer.addComponent(textBehavior);
+let textTimer = new GameObject(300,300);
+sceneOne.gameObjects.push(textTimer);
+let textComponent  = new TextComponent("10","30pt Times","red","blue");
+let textBehavior = new TextBehavior();
+textTimer.addComponent(textComponent);
+textTimer.addComponent(textBehavior);
 
 // let currentScene = sceneOne;
 
@@ -38,11 +37,11 @@ function gameLoop() {
 }
 
 function update() {
-    currentScene.update();    
+    SceneManager.currentScene.update();    
 }
 
 function draw(ctx) {
-    currentScene.draw(ctx, canv.width, canv.height);
+    SceneManager.currentScene.draw(ctx, canv.width, canv.height);
 }
 
 main();
