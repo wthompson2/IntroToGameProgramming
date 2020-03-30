@@ -1,6 +1,6 @@
 import Component from "./Component.js"
 
-class Behavior extends Component{
+export default class Behavior extends Component{
 
     start(){
 
@@ -12,4 +12,4 @@ class Behavior extends Component{
 
 }
 
-export default Behavior;
+// export default Behavior;
