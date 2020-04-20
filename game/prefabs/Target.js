@@ -1,15 +1,34 @@
-import Base from "../../engine/Base.js";
-import Components from "../../engine/Components.js"
-import TargetBehavior from "../behaviors/TargetBehavior.js"
-
-export default class Target extends Base.GameObject{
-  constructor(x, y) {
-    super(x, y)
-    let targetComponent = new Components.TargetComponent(50, "green", "blue");
-    let targetBehavior = new TargetBehavior();
-    this.addComponent(targetComponent);
-    this.addComponent(targetBehavior);
-
-  }
-
+export default {
+  name: "Target",
+  components:[
+    {
+      type:"TargetComponent",
+      values:[
+        {
+          key:"radius",
+          value:"50"
+        },
+        {
+          key:"fill",
+          value:"rgba(255,255,0,.5)"
+        },
+        {
+          key:"stroke",
+          value:"black"
+        },
+      ]
+    },
+    {
+      type:"TargetCollider",
+      values:[
+        {
+          key:"radius",
+          value:"50"
+        }
+      ]
+    },
+    {
+      type:"TargetBehavior",
+    },
+  ]
 }

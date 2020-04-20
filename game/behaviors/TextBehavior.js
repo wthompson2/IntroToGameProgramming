@@ -1,15 +1,14 @@
 import Behavior from "./../../engine/base/Behavior.js"
 import TextComponent from "./../../engine/components/TextComponent.js"
 
-class TextBehavior extends Behavior{
-    // time = 10;
+class TextBehavior extends Behavior {
     
     start(){
         
     }
     update(){
         // this.time -= .1;
-        this.gameObject.getComponent(TextComponent).text = this.time;
+        // this.gameObject.getComponent(TextComponent).text = this.time;
         
     }
 }

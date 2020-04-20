@@ -1,5 +1,5 @@
-import Behavior from "./Behavior.js"
-import TimeComponent from "./TimeComponent.js"
+import Behavior from "../../engine/base/Behavior.js"
+import TimeComponent from "../../engine/components/TimeComponent.js"
 
 class TimeBehavior extends Behavior{
     time = 10;
