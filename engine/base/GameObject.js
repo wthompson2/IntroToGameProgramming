@@ -1,11 +1,15 @@
 import NameableParent from "./NameableParent.js"
 
-export default class GameObject extends NameableParent {
+class GameObject extends NameableParent {
     x; y;
     scaleX;
     scaleY;
     rotation;
     components = [];
+
+    get location() {
+        return new Point(this.x, this.y);
+    }
 
     constructor(x = 0, y = 0, scaleX = 1, scaleY = 1, rotation = 0) {
         super();
@@ -35,8 +39,43 @@ export default class GameObject extends NameableParent {
         this.children.forEach(i => i.update());
     }
     getComponent(type) {
-        let component = this.components.find(i => i instanceof type);
-        if (component) return component;
-        throw "Error, couldn't find type " + type;
+        if (typeof (type) === 'string' || type instanceof String) {
+            //The user passed us a string, not a type
+            //https://stackoverflow.com/a/7772724/10047920
+            let component = this.components.find(i => i.constructor.name === type);
+            if (component) return component;
+            throw "Error, couldn't find type " + type;
+        } else {
+            let component = this.components.find(i => i instanceof type);
+            if (component) return component;
+            throw "Error, couldn't find type " + type;
+        }
+    }
+    hasComponent(type) {
+        if (typeof (type) === 'string' || type instanceof String) {
+            //The user passed us a string, not a type
+            //https://stackoverflow.com/a/7772724/10047920
+            let component = this.components.find(i => i.constructor.name === type);
+            if (component) return true;
+            return false;
+        } else {
+            let component = this.components.find(i => i instanceof type);
+            if (component) return true;
+            return false;
+        }
+    }
+    recursiveCall(functionName) {
+        for (let i = 0; i < this.components.length; i++) {
+            let component = this.components[i];
+            if (component[functionName]) {
+                component[functionName]();
+            }
+        }
+        //Now call the function on the children
+        for (let i = 0; i < this.children.length; i++) {
+            let child = this.children[i];
+            child.recursiveCall(functionName);
+        }
     }
 }
+export default GameObject;

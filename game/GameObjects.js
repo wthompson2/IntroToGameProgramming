@@ -10,5 +10,5 @@ export default {
   Player,
   Target,
   Text,
-  TextTimer
+  TextTimer,
 }

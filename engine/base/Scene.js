@@ -100,7 +100,7 @@ class Scene extends NameableParent {
                 break;
             }
         }
-        if (gameObjectType == null) throw "Could now find game object of type " + obj.type;
+        if (gameObjectType == null) throw "Could not find game object of type " + obj.type;
 
         let gameObject = this.instantiate(gameObjectType, new Point(obj.location.x, obj.location.y), 0, parent);
         /*let gameObject = new GameObject(obj.location.x, obj.location.y, 1, 1, 0);
