@@ -4,7 +4,8 @@ export default {
     objects: [
     {
         name: "Text3",
-        location: { x: 100, y: 100 },
+        type: "Text",
+        location: { x: 115, y: 175 },
         components: [
           {
             type:"TextComponent",
@@ -27,7 +28,8 @@ export default {
       },
       {
         name: "Text2",
-        location: { x: 200, y: 100 },
+        type: "Text",
+        location: { x: 275, y: 175 },
         components: [
           {
             type:"TextComponent",
@@ -50,7 +52,8 @@ export default {
       },
       {
         name: "Text1",
-        location: { x: 300, y: 100 },
+        type: "Text",
+        location: { x: 425, y: 175 },
         components: [
           {
             type:"TextComponent",
@@ -73,7 +76,8 @@ export default {
       },
       {
         name: "TextStart",
-        location: { x: 200, y: 200 },
+        type: "Text",
+        location: { x: 200, y: 300 },
         components: [
           {
             type:"TextComponent",

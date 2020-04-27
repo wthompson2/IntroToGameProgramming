@@ -4,7 +4,8 @@ export default {
     objects: [
     {
         name: "Text",
-        location: { x: 200, y: 200 },
+        type: "Text",
+        location: { x: 90, y: 250 },
         components: [
           {
             type:"TextComponent",
@@ -15,7 +16,7 @@ export default {
             },
             {
                 key:"font",
-                value:"50pt Times"
+                value:"25pt Times"
             },
             {
                 key:"fill",

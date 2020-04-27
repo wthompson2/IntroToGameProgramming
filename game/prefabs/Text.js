@@ -6,7 +6,7 @@ export default {
       values:[
         {
           key:"text",
-          value:"10"
+          value:""
         },
         {
           key:"font",

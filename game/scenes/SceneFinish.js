@@ -6,7 +6,8 @@ export default {
     objects: [
     {
         name: "Text Top",
-        location: { x: 200, y: 100 },
+        type: "Text",
+        location: { x: 25, y: 125 },
         components: [
           {
             type:"TextComponent",
@@ -29,7 +30,8 @@ export default {
       },
       {
         name: "Text Middle",
-        location: { x: 200, y: 150 },
+        type: "Text",
+        location: { x: 75, y: 200 },
         components: [
           {
             type:"TextComponent",
@@ -53,7 +55,8 @@ export default {
       },
       {
         name: "Text Bottom",
-        location: { x: 200, y: 250 },
+        type: "Text",
+        location: { x: 100, y: 350 },
         components: [
           {
             type:"TextComponent",
@@ -64,7 +67,7 @@ export default {
             },
             {
                 key:"font",
-                value:"50pt Times"
+                value:"25pt Times"
             },
             {
                 key:"fill",

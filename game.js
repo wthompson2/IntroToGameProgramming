@@ -19,6 +19,7 @@ Scenes.allScenes
 // add a loop concerning the "play again" feature
 
 SceneManager.currentScene = Scenes.startScene;
+// SceneManager.currentScene = Scenes.allScenes[1];
 
 // document.body.addEventListener('space', space);
 
@@ -43,7 +44,7 @@ function gameLoop() {
 }
 
 function update() {
-    // SceneManager.currentScene.update(Engine.Components.Collider, Engine.Components.CollisionHelper);    
+    SceneManager.currentScene.update(Engine.Components.Collider, Engine.Components.CollisionHelper);    
 }
 
 function draw(ctx) {
@@ -51,4 +52,3 @@ function draw(ctx) {
 }
 
 main();
-

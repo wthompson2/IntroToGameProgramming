@@ -226,7 +226,7 @@ class Scene extends NameableParent {
         if (cameras.length == 0) {
             //You really should add a camera
             //console.log("You should add a camera to the scene. C'mon.")
-            ctx.fillStyle = "cyan";
+            ctx.fillStyle = "gainsboro";
             ctx.fillRect(0, 0, width, height)
             tx = 0;
             ty = 0;
