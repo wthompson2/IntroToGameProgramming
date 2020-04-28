@@ -4,18 +4,19 @@ export default {
     objects: [
         {
             name: "Text Timer",
-            location: { x: 10, y: 10},
+            type: "TextTimer",
+            location: { x: 10, y: 40},
             components: [
                 {
                     type:"TimeComponent",
                     values:[
                         {
                             key:"text",
-                            value:"10"
+                            value:"5"
                         },
                         {
                             key:"font",
-                            value:"20pt Times"
+                            value:"35pt Times"
                         },
                         {
                             key:"fill",
@@ -27,18 +28,19 @@ export default {
         },
         {
             name: "Life1",
-            location: { x: 20, y: 10},
+            type: "Life",
+            location: { x: 70, y: 25},
             components: [
                 {
                     type:"LifeComponent",
                     values:[
                         {
                             key:"height",
-                            value:"10"
+                            value:"35"
                         },
                         {
                             key:"width",
-                            value:"10"
+                            value:"35"
                         },
                         {
                             key:"fill",
@@ -54,18 +56,19 @@ export default {
         },
         {
             name: "Life2",
-            location: { x: 25, y: 10},
+            type: "Life",
+            location: { x: 110, y: 25},
             components: [
                 {
                     type:"LifeComponent",
                     values:[
                         {
                             key:"height",
-                            value:"10"
+                            value:"35"
                         },
                         {
                             key:"width",
-                            value:"10"
+                            value:"35"
                         },
                         {
                             key:"fill",
@@ -81,18 +84,19 @@ export default {
         },
         {
             name: "Life3",
-            location: { x: 30, y: 10},
+            type: "Life",
+            location: { x: 150, y: 25},
             components: [
                 {
                     type:"LifeComponent",
                     values:[
                         {
                             key:"height",
-                            value:"10"
+                            value:"35"
                         },
                         {
                             key:"width",
-                            value:"10"
+                            value:"35"
                         },
                         {
                             key:"fill",
@@ -108,7 +112,8 @@ export default {
         },
         {
             name: "Score",
-            location: { x: 10, y: 300},
+            type: "Text",
+            location: { x: 10, y: 475},
             components: [
                 {
                     type:"TextComponent",
@@ -132,22 +137,23 @@ export default {
         },
         {
             name: "Player",
-            location: { x: 200, y: 300},
+            type: "Player",
+            location: { x: 325, y: 450},
             components: [
                 {
                     type:"PlayerComponent",
                     values:[
                         {
                             key:"height",
-                            value:"30"
+                            value:"50"
                         },
                         {
                             key:"width",
-                            value:"10"
+                            value:"50"
                         },
                         {
                             key:"fill",
-                            value:"white"
+                            value:"blue"
                         },
                         {
                             key:"stroke",
@@ -160,18 +166,19 @@ export default {
         {
             // How to add x number of arrows when clicked?
             name: "Arrow",
-            location: { x: 205, y: 300}, // x: ??, y: ??
+            type: "Arrow",
+            location: { x: 325, y: 410}, // x: ??, y: ??
             components: [
                 {
                     type:"ArrowComponent",
                     values:[
                         {
                             key:"height",
-                            value:"10"
+                            value:"25"
                         },
                         {
                             key:"width",
-                            value:"2"
+                            value:"1"
                         },
                         {
                             key:"stroke",
@@ -184,22 +191,19 @@ export default {
         {
             // How to add x amount of targets when hit?
             name: "Target",
-            location: { x: 300, y: 50}, // x: ??, y: ??
+            type: "Target",
+            location: { x: 500, y: 350}, // x: ??, y: ??
             components: [
                 {
                     type:"TargetComponent",
                     values:[
                         {
-                            key:"height",
-                            value:"30"
-                        },
-                        {
-                            key:"width",
-                            value:"10"
+                            key:"radius",
+                            value:"25"
                         },
                         {
                             key:"fill",
-                            value:"white"
+                            value:"red"
                         },
                         {
                             key:"stroke",

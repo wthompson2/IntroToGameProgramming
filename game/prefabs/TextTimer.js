@@ -1,12 +1,12 @@
 export default {
-  name: "Timer",
+  name: "TextTimer",
   components:[
     {
       type:"TextComponent",
       values:[
         {
           key:"text",
-          value:"10"
+          value:""
         },
         {
           key:"font",
@@ -18,10 +18,10 @@ export default {
         },
        
       ]
-    },
-    {
-      type:"CountDownTimer",
     }
+    // {
+    //   type:"TextTimer",
+    // }
   ]
 
 }

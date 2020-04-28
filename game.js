@@ -18,8 +18,20 @@ Scenes.allScenes
 
 // add a loop concerning the "play again" feature
 
-SceneManager.currentScene = Scenes.startScene;
-// SceneManager.currentScene = Scenes.allScenes[1];
+function countdownToGame()
+{
+    SceneManager.currentScene = Scenes.sceneGame;
+}
+
+SceneManager.currentScene = Scenes.sceneStart;
+
+if (true /* spacebar is pressed */)
+{
+    SceneManager.currentScene = Scenes.sceneCountdown;
+    setTimeout(countdownToGame, 3000);
+
+    //SceneManager.currentScene = Scenes.sceneGame;
+}
 
 // document.body.addEventListener('space', space);
 

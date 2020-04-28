@@ -4,7 +4,10 @@ import SceneGame from "./scenes/SceneGame.js"
 import SceneFinish from "./scenes/SceneFinish.js"
 
 export default{
-  startScene: "SceneStart",
+  sceneStart: "SceneStart",
+  sceneCountdown: "SceneCountdown",
+  sceneGame: "SceneGame",
+  sceneFinish: "SceneFinish",
   allScenes: [
     SceneStart,
     SceneCountdown,

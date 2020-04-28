@@ -6,11 +6,11 @@ export default {
       values:[
         {
           key:"radius",
-          value:"50"
+          value:"0"
         },
         {
           key:"fill",
-          value:"rgba(255,255,0,.5)"
+          value:"white"
         },
         {
           key:"stroke",
@@ -18,15 +18,15 @@ export default {
         },
       ]
     },
-    {
-      type:"TargetCollider",
-      values:[
-        {
-          key:"radius",
-          value:"50"
-        }
-      ]
-    },
+    // {
+    //   type:"TargetCollider",
+    //   values:[
+    //     {
+    //       key:"radius",
+    //       value:"50"
+    //     }
+    //   ]
+    // },
     {
       type:"TargetBehavior",
     },

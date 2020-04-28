@@ -6,11 +6,11 @@ export default {
       values: [
         {
           key: "width",
-          value: "100"
+          value: "0"
         },
         {
           key: "height",
-          value: "100"
+          value: "0"
         },
         {
           key: "stroke",
