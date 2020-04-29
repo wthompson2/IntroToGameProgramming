@@ -2,7 +2,12 @@ export default {
     name: "SceneCountdown",
   
     objects: [
-    {
+      {
+        name: "CountdownSceneTimer",
+        location: {x:0, y:0},
+        type: "CountdownSceneTimer",
+      },
+      {
         name: "Text3",
         type: "Text",
         location: { x: 115, y: 175 },

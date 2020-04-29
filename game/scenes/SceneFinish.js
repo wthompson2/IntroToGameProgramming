@@ -4,7 +4,12 @@ export default {
     name: "SceneFinish",
   
     objects: [
-    {
+      {
+        name: "Scene listener",
+        location: {x:0, y:0},
+        type: "SceneTransition",
+      },
+      {
         name: "Text Top",
         type: "Text",
         location: { x: 25, y: 125 },
@@ -54,16 +59,16 @@ export default {
         ]
       },
       {
-        name: "Text Bottom",
+        name: "Enter",
         type: "Text",
-        location: { x: 100, y: 350 },
+        location: { x: 120, y: 350 },
         components: [
           {
             type:"TextComponent",
             values:[
             {
                 key:"text",
-                value:"Press 'SPACEBAR' to play again"
+                value:"Press 'ENTER' to play again"
             },
             {
                 key:"font",

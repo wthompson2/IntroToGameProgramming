@@ -1,6 +1,7 @@
 import Engine from "../engine/Engine.js"
 import GameBehaviors from "./GameBehaviors.js";
 import GameObjects from "./GameObjects.js";
+import Scenes from "./Scenes.js";
 
 export default class SceneManager {
   static scenes = [];
@@ -50,6 +51,11 @@ export default class SceneManager {
   }
   static instantiate(gameObjectType, location, rotation) {
     return this.currentScene.instantiate(gameObjectType, location, rotation, this.currentScene.children);
+  }
+
+  static countdownToGame()
+  {
+    SceneManager.currentScene = Scenes.sceneGame;
   }
 
 

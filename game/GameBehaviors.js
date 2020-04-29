@@ -1,13 +1,13 @@
 import TargetBehavior from "./behaviors/TargetBehavior.js";
 import TimeBehavior from "./behaviors/TimeBehavior.js";
-import ArrowBehavior from "./behaviors/ArrowBehavior.js";
-import PlayerBehavior from "./behaviors/PlayerBehavior.js";
 import TextBehavior from "./behaviors/TextBehavior.js";
+import SceneTransitionBehavior from "./behaviors/SceneTransitionBehavior.js";
+import CountdownSceneTimerBehavior from "./behaviors/CountdownSceneTimerBehavior.js";
 
 export default{
   TargetBehavior,
   TimeBehavior,
-  ArrowBehavior,
-  PlayerBehavior,
-  TextBehavior
+  TextBehavior,
+  SceneTransitionBehavior,
+  CountdownSceneTimerBehavior
 }

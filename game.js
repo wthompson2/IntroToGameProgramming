@@ -8,37 +8,47 @@ Engine.Base.Scene.gameObjects = GameObjects;
 Engine.Base.Scene.components = Engine.Components;
 Engine.Base.Scene.gameBehaviors = GameBehaviors;
 
-// let sceneStart = new Scenes.SceneStart();
-// let sceneCountdown = new Scenes.SceneCountdown();
-// let sceneGame = new Scenes.SceneGame();
-// let sceneFinish = new Scenes.SceneFinish();
-
 Scenes.allScenes
   .forEach(i => SceneManager.addScene(Engine.Base.Scene.parse(i)))
 
-// add a loop concerning the "play again" feature
-
-function countdownToGame()
-{
-    SceneManager.currentScene = Scenes.sceneGame;
-}
-
 SceneManager.currentScene = Scenes.sceneStart;
+// SceneManager.currentScene = Scenes.sceneFinish;
 
-if (true /* spacebar is pressed */)
-{
-    SceneManager.currentScene = Scenes.sceneCountdown;
-    setTimeout(countdownToGame, 3000);
-
-    //SceneManager.currentScene = Scenes.sceneGame;
-}
-
-// document.body.addEventListener('space', space);
+//Setup event handling
+document.body.addEventListener('keydown', keydown);
+document.body.addEventListener('keyup', keyup);
+document.body.addEventListener('keypress', keypress);
+document.body.addEventListener('mousedown', mousedown);
+document.body.addEventListener('mouseup', mouseup);
 
 let Input = Engine.Base.Input;
 
+function keydown(event) {
+    if (Input.keys[event.key] != true)
+        Input.down[event.key] = true;
+    Input.keys[event.key] = true;
+  }
+  
+function keyup(event) {
+    if (Input.keys[event.key] != false)
+        Input.up[event.key] = true;
+    Input.keys[event.key] = false;
+}
+
+function mousedown(event) {
+    if (Input.mouseButtons[event.button] != true)
+        Input.mouseButtonsDown[event.button] = true;
+    Input.mouseButtons[event.button] = true;
+}
+
+function mouseup(event) {
+    if (Input.mouseButtons[event.button] != false)
+        Input.mouseButtonsUp[event.button] = true;
+    Input.mouseButtons[event.button] = false;
+}
+
 function keypress(event) {
-    // console.log(`Modifier keys: Space: ${event.spaceKey}`);
+    //console.log(`Modifier keys: Control: ${event.ctrlKey}, Alt: ${event.altKey}, Shift: ${event.shiftKey}, Meta Key: ${event.metaKey}`);
 }
 
 let canv, ctx;
@@ -51,6 +61,7 @@ function main() {
 }
 
 function gameLoop() {
+    Input.swapUpDownArrays();
     update();
     draw(ctx);
 }
