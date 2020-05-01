@@ -1,4 +1,3 @@
-// import SceneGame from "./SceneGame";
 
 export default {
     name: "SceneFinish",
@@ -6,7 +5,7 @@ export default {
     objects: [
       {
         name: "Scene listener",
-        location: {x:0, y:0},
+        location: { x: 0, y: 0 },
         type: "SceneTransition",
       },
       {
@@ -34,6 +33,11 @@ export default {
         ]
       },
       {
+        name: "Score",
+        type: "Score",
+        location: { x: 515, y: 200 },
+      },
+      {
         name: "Text Middle",
         type: "Text",
         location: { x: 75, y: 200 },
@@ -43,8 +47,7 @@ export default {
             values:[
             {
                 key:"text",
-                value:"Your score was x!"
-                // value:"Your score was " + SceneGame.score + "!"
+                value:"Your score was:"
             },
             {
                 key:"font",

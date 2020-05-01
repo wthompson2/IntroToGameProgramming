@@ -4,7 +4,7 @@ export default {
     objects: [
       {
         name: "CountdownSceneTimer",
-        location: {x:0, y:0},
+        location: { x: 0, y: 0 },
         type: "CountdownSceneTimer",
       },
       {

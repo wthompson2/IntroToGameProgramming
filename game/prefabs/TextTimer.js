@@ -6,11 +6,11 @@ export default {
       values:[
         {
           key:"text",
-          value:""
+          value:"5"
         },
         {
           key:"font",
-          value:"30pt Times"
+          value:"35pt Times"
         },
         {
           key:"fill",
@@ -18,10 +18,10 @@ export default {
         },
        
       ]
+    },
+    {
+      type:"TimeBehavior",
     }
-    // {
-    //   type:"TextTimer",
-    // }
   ]
 
 }

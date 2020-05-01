@@ -7,8 +7,7 @@ class TextBehavior extends Behavior {
         
     }
     update(){
-        // this.time -= .1;
-        // this.gameObject.getComponent(TextComponent).text = this.time;
+        
         
     }
 }

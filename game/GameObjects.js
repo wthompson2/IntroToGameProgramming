@@ -3,6 +3,7 @@ import Text from "./prefabs/Text.js"
 import TextTimer from "./prefabs/TextTimer.js"
 import SceneTransition from "./prefabs/SceneTransition.js"
 import CountdownSceneTimer from "./prefabs/CountdownSceneTimer.js"
+import Score from "./prefabs/Score.js"
 
 
 export default {
@@ -10,5 +11,6 @@ export default {
   Text,
   TextTimer,
   SceneTransition,
-  CountdownSceneTimer
+  CountdownSceneTimer,
+  Score
 }

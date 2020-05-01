@@ -5,43 +5,28 @@ export default {
         {
             name: "Text Timer",
             type: "TextTimer",
-            location: { x: 10, y: 40},
-            components: [
-                {
-                    type:"TimeComponent",
-                    values:[
-                        {
-                            key:"text",
-                            value:"5"
-                        },
-                        {
-                            key:"font",
-                            value:"35pt Times"
-                        },
-                        {
-                            key:"fill",
-                            value:"black"
-                        }
-                    ]
-                }
-            ]
+            location: { x: 10, y: 40 },
         },
         {
             name: "Score",
+            type: "Score",
+            location: { x: 240, y: 475 },
+        },
+        {
+            name: "ScoreText",
             type: "Text",
-            location: { x: 10, y: 475},
+            location: { x: 5, y: 475 },
             components: [
                 {
                     type:"TextComponent",
                     values:[
                         {
                             key:"text",
-                            value:"SCORE: 0"
-                            // value:"SCORE: " + score
+                            value:"SCORE: "
                         },
                         {
                             key:"font",
-                            value:"20pt Times"
+                            value:"50pt Times"
                         },
                         {
                             key:"fill",
@@ -55,7 +40,7 @@ export default {
             // How to add x amount of targets when hit?
             name: "Target",
             type: "Target",
-            location: { x: 500, y: 350}, // x: ??, y: ??
+            location: { x: 500, y: 350 },
             components: [
                 {
                     type:"TargetComponent",
@@ -70,7 +55,7 @@ export default {
                         },
                         {
                             key:"stroke",
-                            value:"black"
+                            value:"blue"
                         }
                     ]
                 }
