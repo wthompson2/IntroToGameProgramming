@@ -37,7 +37,6 @@ export default {
             ]
         },
         {
-            // How to add x amount of targets when hit?
             name: "Target",
             type: "Target",
             location: { x: 500, y: 350 },

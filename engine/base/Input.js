@@ -35,6 +35,7 @@ class Input{
         this.frameMouseButtonsUp = this.mouseButtonsUp;
         this.frameMouseScrollDelta = this.mouseScrollDelta;
         this.mouseScrollDelta = 0;
+        this.mouseButtons = [];
         this.mouseButtonsDown = [];
         this.mouseButtonsUp = [];
     }

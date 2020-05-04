@@ -11,7 +11,7 @@ export default class TargetBehavior extends Base.Behavior {
         this.radius = TargetComponent.radius;
     }
     update() {
-        if (Base.Input.getMouseButtonUp('Click'))
+        if (Base.Input.getMouseButtonUp(0))
         {
             // hitbox of the if statement below is a square, try and make circle
             if ((Base.Input.mousePosition.x <= location.x + this.radius && Base.Input.mousePosition.x >= location.x - this.radius)

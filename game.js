@@ -36,13 +36,15 @@ function keyup(event) {
 }
 
 function mousedown(event) {
-    if (Input.mouseButtons[event.button] != true)
+    if (Input.mouseButtons 
+        && Input.mouseButtons[event.button])
         Input.mouseButtonsDown[event.button] = true;
     Input.mouseButtons[event.button] = true;
 }
 
 function mouseup(event) {
-    if (Input.mouseButtons[event.button] != false)
+    if (Input.mouseButtons 
+        && Input.mouseButtons[event.button])
         Input.mouseButtonsUp[event.button] = true;
     Input.mouseButtons[event.button] = false;
 }
