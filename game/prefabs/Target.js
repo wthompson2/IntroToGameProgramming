@@ -19,6 +19,15 @@ export default {
       ]
     },
     {
+      type:"TargetCollider",
+      values:[
+        {
+          key:"radius",
+          value:"0"
+        }
+      ]
+    },
+    {
       type:"TargetBehavior",
     },
   ]

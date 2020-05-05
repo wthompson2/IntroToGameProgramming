@@ -1,4 +1,4 @@
-// import CircleCollider from "./CircleCollider.js"
+import TargetCollider from "./TargetCollider.js"
 import PointCollider from "./PointCollider.js"
 // import AABBCollider from "./AABBCollider.js";
 // import TriangleCollider from "./TriangleCollider.js"
@@ -6,18 +6,19 @@ import Point from "../base/Point.js";
 // import Line from "../base/Line.js";
 
 
-class CollisionHelper {
+export default class CollisionHelper {
 
     static inCollision(one, two) {
-        // if (one.collider instanceof CircleCollider && two.collider instanceof PointCollider) {
-        //     let distance = one.gameObject.location.distance(two.gameObject.location);
+        if (one.collider instanceof TargetCollider && two.collider instanceof PointCollider) {
+            let distance = one.gameObject.location.distance(two.gameObject.location);
 
-        //     if (distance < one.collider.radius)
-        //         return true;
-        //     return false;
-        // if (one.collider instanceof PointCollider && two.collider instanceof CircleCollider) {
-        //     return this.inCollision(two, one);
-        } 
+            if (distance < one.collider.radius)
+                return true;
+            return false;
+        }
+        else if (one.collider instanceof PointCollider && two.collider instanceof TargetCollider) {
+            return this.inCollision(two, one);
+        }
         // else if (one.collider instanceof AABBCollider && two.collider instanceof PointCollider) {
         //     let diff = one.gameObject.location.diff(two.gameObject.location);
         //     return Math.abs(diff.x) < one.collider.width / 2 && Math.abs(diff.y) < one.collider.height / 2;
@@ -72,8 +73,6 @@ class CollisionHelper {
     //         return this.inCollision(two, one);
     //     }
 
-    // }
+    }
 
 }
-
-export default CollisionHelper;

@@ -57,6 +57,9 @@ export default {
                             value:"blue"
                         }
                     ]
+                },
+                {
+                    type:"ClickBehavior"
                 }
             ]
         }
