@@ -4,7 +4,7 @@ import SceneManager from "../SceneManager.js"
 import Engine from "../../engine/Engine.js"
 
 class TimeBehavior extends Behavior{
-    time = 100;
+    time = 50;
     sceneFinish = "SceneFinish";
     
     start(){
