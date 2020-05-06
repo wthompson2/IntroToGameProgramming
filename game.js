@@ -53,6 +53,11 @@ function keypress(event) {
     //console.log(`Modifier keys: Control: ${event.ctrlKey}, Alt: ${event.altKey}, Shift: ${event.shiftKey}, Meta Key: ${event.metaKey}`);
 }
 
+function mousemove(event){
+    Input.mousePosition.x = event.offsetX;
+    Input.mousePosition.y = event.offsetY;
+  }
+
 let canv, ctx;
 
 function main() {

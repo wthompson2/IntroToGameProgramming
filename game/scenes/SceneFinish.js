@@ -1,3 +1,5 @@
+import ScorePlaceholder from "../ScorePlaceholder.js"
+import SceneGame from "./SceneGame.js"
 
 export default {
     name: "SceneFinish",
@@ -32,35 +34,54 @@ export default {
           }
         ]
       },
-      {
-        name: "Score",
-        type: "Score",
-        location: { x: 515, y: 200 },
-      },
-      {
-        name: "Text Middle",
-        type: "Text",
-        location: { x: 75, y: 200 },
-        components: [
-          {
-            type:"TextComponent",
-            values:[
-            {
-                key:"text",
-                value:"Your score was:"
-            },
-            {
-                key:"font",
-                value:"50pt Times"
-            },
-            {
-                key:"fill",
-                value:"black"
-            }
-            ]
-          }
-        ]
-      },
+      // {
+      //   name: "Score",
+      //   type: "Text",
+      //   location: { x: 515, y: 200 },
+      //   components: [
+      //     {
+      //       type:"TextComponent",
+      //       values:[
+      //       {
+      //           key:"text",
+      //           value: SceneGame.Score
+      //       },
+      //       {
+      //           key:"font",
+      //           value:"50pt Times"
+      //       },
+      //       {
+      //           key:"fill",
+      //           value:"black"
+      //       }
+      //       ]
+      //     }
+      //   ]
+      // },
+      // {
+      //   name: "Text Middle",
+      //   type: "Text",
+      //   location: { x: 75, y: 200 },
+      //   components: [
+      //     {
+      //       type:"TextComponent",
+      //       values:[
+      //       {
+      //           key:"text",
+      //           value:"Your score was:"
+      //       },
+      //       {
+      //           key:"font",
+      //           value:"50pt Times"
+      //       },
+      //       {
+      //           key:"fill",
+      //           value:"black"
+      //       }
+      //       ]
+      //     }
+      //   ]
+      // },
       {
         name: "Enter",
         type: "Text",

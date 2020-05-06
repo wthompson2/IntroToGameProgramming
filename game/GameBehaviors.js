@@ -5,6 +5,7 @@ import SceneTransitionBehavior from "./behaviors/SceneTransitionBehavior.js";
 import CountdownSceneTimerBehavior from "./behaviors/CountdownSceneTimerBehavior.js";
 import ScoreBehavior from "./behaviors/ScoreBehavior.js";
 import ClickBehavior from "./behaviors/ClickBehavior.js";
+import TargetDemoBehavior from "./behaviors/TargetDemoBehavior.js";
 
 export default{
   TargetBehavior,
@@ -13,5 +14,6 @@ export default{
   SceneTransitionBehavior,
   CountdownSceneTimerBehavior,
   ScoreBehavior,
-  ClickBehavior
+  ClickBehavior,
+  TargetDemoBehavior
 }

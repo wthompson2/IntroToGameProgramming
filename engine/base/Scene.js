@@ -3,6 +3,7 @@ import Point from "./Point.js"
 import GameObject from "./GameObject.js";
 import PointCollider from "../components/PointCollider.js";
 import Input from "./Input.js";
+import Target from "../../game/prefabs/Target.js"
 
 /**
  * A scene represents a level in a game.
@@ -383,6 +384,11 @@ class Scene extends NameableParent {
 
 
   }
+
+  destroy(gameObject) {
+    Target.radius = 0; 
+  }
+
   getCollidable(gameObject, collidableChildren, type) {
 
     if (gameObject.getComponent) {

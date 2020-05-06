@@ -3,6 +3,11 @@ export default {
 
     objects: [
         {
+            name:"Target Demo",
+            location: { x: 0, y: 0 },
+            type: "TargetDemo"
+        },
+        {
             name: "Text Timer",
             type: "TextTimer",
             location: { x: 10, y: 40 },
@@ -37,31 +42,9 @@ export default {
             ]
         },
         {
-            name: "Target",
+            name: "Enter",
             type: "Target",
-            location: { x: 500, y: 350 },
-            components: [
-                {
-                    type:"TargetComponent",
-                    values:[
-                        {
-                            key:"radius",
-                            value:"25"
-                        },
-                        {
-                            key:"fill",
-                            value:"red"
-                        },
-                        {
-                            key:"stroke",
-                            value:"blue"
-                        }
-                    ]
-                },
-                {
-                    type:"ClickBehavior"
-                }
-            ]
+            location: { x: 500, y: 350 }
         }
     ]
 }

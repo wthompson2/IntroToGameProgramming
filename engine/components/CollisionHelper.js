@@ -12,7 +12,7 @@ export default class CollisionHelper {
         if (one.collider instanceof TargetCollider && two.collider instanceof PointCollider) {
             let distance = one.gameObject.location.distance(two.gameObject.location);
 
-            if (distance < one.collider.radius)
+            if (distance < +one.collider.radius)
                 return true;
             return false;
         }

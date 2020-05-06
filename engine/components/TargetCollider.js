@@ -2,7 +2,7 @@ import Collider from "./Collider.js"
 
 
 class TargetCollider extends Collider {
-    radius = 0;
+    radius = 25;
     constructor() {
         super();
     }

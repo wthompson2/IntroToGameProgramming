@@ -16,7 +16,6 @@ export default {
           key:"fill",
           value:"black"
         },
-       
       ]
     },
     {

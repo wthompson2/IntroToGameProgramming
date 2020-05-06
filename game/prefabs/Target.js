@@ -6,15 +6,15 @@ export default {
       values:[
         {
           key:"radius",
-          value:"0"
+          value:"25"
         },
         {
           key:"fill",
-          value:"white"
+          value:"red"
         },
         {
           key:"stroke",
-          value:"black"
+          value:"blue"
         },
       ]
     },
@@ -23,7 +23,7 @@ export default {
       values:[
         {
           key:"radius",
-          value:"0"
+          value:"25"
         }
       ]
     },

@@ -5,23 +5,23 @@ export default {
       {
         name: "Scene listener",
         location: { x: 0, y: 0 },
-        type: "SceneTransition",
+        type: "SceneTransition"
       },
       {
         name: "Title",
         type: "Text",
-        location: { x: 30, y: 150 },
+        location: { x: 40, y: 150 },
         components: [
           {
             type:"TextComponent",
             values:[
             {
                 key:"text",
-                value:"CLICK MASTER"
+                value:"BUTTON MASHER"
             },
             {
                 key:"font",
-                value:"60pt Times"
+                value:"50pt Times"
             },
             {
                 key:"fill",
@@ -41,7 +41,7 @@ export default {
             values:[
             {
                 key:"text",
-                value:"~Test Your Reflexes~"
+                value:"~Test Your Speed~"
             },
             {
                 key:"font",
